@@ -1,5 +1,5 @@
 {
-  "name": "v-admin",
+  "name": "@datalogix/v-admin",
   "version": "0.0.1",
   "description": "Administration panel with Vue 3",
   "repository": "datalogix/v-admin",
@@ -12,7 +12,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-lib": "vue-cli-service build --target lib --inline-vue src/admin.js",
+    "build-lib": "vue-cli-service build --target lib --inline-vue --name v-admin src/admin.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -53,7 +53,3 @@
     "access": "public"
   }
 }
-
-
-
-
