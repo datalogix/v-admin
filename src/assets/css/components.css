@@ -1,0 +1,28 @@
+/* Loading */
+.loading:before {
+  @apply absolute z-40 inset-0 w-full h-full text-white bg-gray-700 overflow-hidden;
+
+  content: '';
+}
+
+.loading:after {
+  @apply fixed inset-1/2 z-50 w-10 h-10 -mt-5 -ml-5 flex items-center justify-center text-white text-4xl;
+
+  content: '\e926';
+  font-family: 'primeicons';
+  animation: fa-spin 2s infinite linear;
+}
+
+/* Vue-Toastification */
+.Vue-Toastification__close-button {
+  @apply outline-none focus:outline-none;
+}
+
+/* Message */
+.p-message-wrapper {
+  @apply items-start !important;
+}
+
+.p-message-icon {
+  @apply text-4xl mt-2 mr-4 !important;
+}
