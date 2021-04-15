@@ -1,23 +1,9 @@
 <template>
-  <div class="grid grid-cols-12 gap-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
     <div
       v-for="(chart, index) in charts"
-      class="col-span-12 md:col-span-6"
       :key="index"
-      :class="{
-        'lg:col-span-1': chart.col === 1,
-        'lg:col-span-2': chart.col === 2,
-        'lg:col-span-3': chart.col === 3,
-        'lg:col-span-4': chart.col === 4,
-        'lg:col-span-5': chart.col === 5,
-        'lg:col-span-6': chart.col === 6,
-        'lg:col-span-7': chart.col === 7,
-        'lg:col-span-8': chart.col === 8,
-        'lg:col-span-9': chart.col === 9,
-        'lg:col-span-10': chart.col === 10,
-        'lg:col-span-11': chart.col === 11,
-        'lg:col-span-12': chart.col === 12
-      }"
+      :class="{[`lg:col-span-${chart.col ? chart.col : 6}`]: true}"
     >
       <Chart
         :type="chart.type"
