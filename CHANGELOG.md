@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/datalogix/v-admin/compare/v0.0.6...v0.0.7) (2021-04-15)
+
+
+### Features
+
+* custom router view ([c944496](https://github.com/datalogix/v-admin/commit/c94449616195c2881dbf192ff68c0862af584086))
+
+
+### Bug Fixes
+
+* plugins ([d2960b3](https://github.com/datalogix/v-admin/commit/d2960b3ef49e15cd00bae807ae0a0eefdc1ac24a))
+
 ### [0.0.6](https://github.com/datalogix/v-admin/compare/v0.0.5...v0.0.6) (2021-04-15)
 
 
