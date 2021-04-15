@@ -1,12 +1,12 @@
 <template>
   <div class="flex h-screen bg-gray-200 text-gray-700">
     <AdminSidebar ref="sidebar">
-      <router-link to="/" class="flex items-center justify-center my-8 mx-4">
+      <AdminLink to="/" class="justify-center my-8">
         <img
           v-if="$admin.options.logo"
           :src="$admin.options.logo"
           :alt="$admin.options.name"
-          class="max-h-32"
+          class="max-h-32 mx-2"
         />
 
         <span
@@ -14,7 +14,7 @@
           v-text="$admin.options.name"
           class="text-white text-2xl mx-2 font-semibold"
         />
-      </router-link>
+      </AdminLink>
 
       <AdminNavigation
         :items="$admin.navigation.orderBy()"
