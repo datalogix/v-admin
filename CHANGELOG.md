@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/datalogix/v-admin/compare/v0.0.10...v0.0.11) (2021-04-15)
+
+
+### Bug Fixes
+
+* default app with a function ([c96002c](https://github.com/datalogix/v-admin/commit/c96002c68b838f0b0ec16dd593580eae2933c15d))
+
 ### [0.0.10](https://github.com/datalogix/v-admin/compare/v0.0.9...v0.0.10) (2021-04-15)
 
 
