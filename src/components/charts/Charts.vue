@@ -2,7 +2,7 @@
   <div class="grid grid-cols-12 gap-10">
     <div
       v-for="(chart, index) in charts"
-      class="md:col-span-6"
+      class="col-span-12 md:col-span-6"
       :key="index"
       :class="{
         'lg:col-span-1': chart.col === 1,
