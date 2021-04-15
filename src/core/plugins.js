@@ -25,6 +25,10 @@ export const applyPlugins = (admin) => {
     app.use(registerComponents(admin))
     app.use(createTranslations(admin))
 
+    admin.options.plugins.forEach(plugin => {
+      app.use(...plugin)
+    })
+
     admin.inject('i18n', app.config.globalProperties.$i18n)
   })
 }
