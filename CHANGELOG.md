@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/datalogix/v-admin/compare/v0.0.9...v0.0.10) (2021-04-15)
+
+
+### Features
+
+* custom layout ([8115508](https://github.com/datalogix/v-admin/commit/8115508afe0d9c88ed2228ec24a949d2e8bcd54e))
+
 ### [0.0.9](https://github.com/datalogix/v-admin/compare/v0.0.8...v0.0.9) (2021-04-15)
 
 
