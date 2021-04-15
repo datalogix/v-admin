@@ -1,4 +1,5 @@
 export const DEFAULTS = {
+  app: null,
   el: '#app',
   name: 'Datalogix',
   locale: 'pt-BR',
@@ -19,5 +20,6 @@ export const DEFAULTS = {
   createMenu: [],
   userMenu: [],
   navigation: [],
+  plugins: [],
   modules: []
 }

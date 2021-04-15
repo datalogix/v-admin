@@ -45,12 +45,20 @@ export class Admin extends Hookable {
    * Init
    */
 
+  async createApp () {
+    if (typeof this.options.app === 'function') {
+      return this.options.app(this)
+    }
+
+    return this.options.app || createApp(App)
+  }
+
   async init () {
     if (this.app) return
 
     this.showLoading()
 
-    this.app = createApp(App)
+    this.app = await this.createApp()
 
     await this.callHook('init', this, this.app)
 
