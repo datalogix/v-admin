@@ -1,5 +1,6 @@
 export const DEFAULTS = {
   app: null,
+  router: null,
   el: '#app',
   name: 'Datalogix',
   locale: 'pt-BR',

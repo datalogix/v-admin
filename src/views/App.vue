@@ -3,7 +3,7 @@
 
   <transition v-else name="fade">
     <component :is="$route.meta.layout || AppLayout">
-      <router-view />
+      <component :is="$admin.options.router || 'router-view'" />
     </component>
   </transition>
 </template>
