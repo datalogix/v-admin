@@ -93,6 +93,38 @@ export class Admin extends Hookable {
       document.body.classList.remove(this.options.loading)
     }, this.options.loadingTimeout || 0)
   }
+
+  /**
+   * Visit
+   */
+  async visit (to, external = false) {
+    if (typeof to === 'function') {
+      to = await to()
+    }
+
+    if (!to) {
+      return this.notify('Nenhuma ação definida')
+    }
+
+    if (typeof this.options.clickHandler === 'function') {
+      return await this.options.clickHandler(to, external)
+    }
+
+    if (typeof to === 'string' && to.startsWith('http')) {
+      if (external) {
+        return window.open(to, '_blank')
+      }
+
+      window.location.href = to
+      return
+    }
+
+    if (external) {
+      return window.open(this.router.resolve(to).href, '_blank')
+    }
+
+    return this.router.push(to)
+  }
 }
 
 export const useAdmin = () => inject(ADMIN_KEY)
