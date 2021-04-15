@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/datalogix/v-admin/compare/v0.0.8...v0.0.9) (2021-04-15)
+
+
+### Bug Fixes
+
+* build ([b31d0e5](https://github.com/datalogix/v-admin/commit/b31d0e5c9ddd4914d1b65a54257e7fb6dddaaaae))
+
 ### [0.0.8](https://github.com/datalogix/v-admin/compare/v0.0.7...v0.0.8) (2021-04-15)
 
 ### [0.0.7](https://github.com/datalogix/v-admin/compare/v0.0.6...v0.0.7) (2021-04-15)
