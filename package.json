@@ -1,6 +1,6 @@
 {
   "name": "@datalogix/v-admin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Administration panel with Vue 3",
   "repository": "datalogix/v-admin",
   "license": "MIT",
@@ -15,7 +15,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-lib": "vue-cli-service build --target lib --inline-vue --name v-admin src/admin.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "npm run lint",
+    "release": "npm run test && npm run build-lib && stantard-version && git push --follow-tags && npm publish"
   },
   "dependencies": {
     "@vuelidate/core": "^2.0.0-alpha.15",
@@ -49,6 +51,7 @@
     "eslint-plugin-promise": "^5.1",
     "eslint-plugin-vue": "^7.9",
     "postcss": "^7.0",
+    "standard-version": "^9.2.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   },
   "publishConfig": {
