@@ -1,11 +1,10 @@
 import Hookable from 'hookable'
-import { createApp, inject } from 'vue'
+import { inject } from 'vue'
 import { mergeConfig } from '@/config'
 import { applyHelpers } from '@/core/helpers'
 import { applyState } from '@/core/state'
 import { applyModules } from '@/core/modules'
 import { applyPlugins } from '@/core/plugins'
-import App from '@/views/App'
 
 import '@/assets/css/tailwind.css'
 
@@ -45,12 +44,12 @@ export class Admin extends Hookable {
    * Init
    */
 
-  async createApp () {
+  async createAdminApp () {
     if (typeof this.options.app === 'function') {
       return this.options.app(this)
     }
 
-    return this.options.app || createApp(App)
+    return this.options.app
   }
 
   async init () {
@@ -58,7 +57,7 @@ export class Admin extends Hookable {
 
     this.showLoading()
 
-    this.app = await this.createApp()
+    this.app = await this.createAdminApp()
 
     await this.callHook('init', this, this.app)
 

@@ -1,6 +1,11 @@
+import { createApp } from 'vue'
+import AppLayout from '@/layouts/App'
+import App from '@/views/App'
+
 export const DEFAULTS = {
-  app: null,
-  router: null,
+  app: createApp(App),
+  router: 'router-view',
+  layout: AppLayout,
   el: '#app',
   name: 'Datalogix',
   locale: 'pt-BR',
