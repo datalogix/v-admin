@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
 import { useAdmin } from '@/admin'
+import AppLayout from '@/layouts/App'
 
 export default {
   setup () {
@@ -19,7 +19,7 @@ export default {
     admin.ready()
 
     return {
-      AppLayout: defineAsyncComponent(() => import('@/layouts/App'))
+      AppLayout
     }
   }
 }
