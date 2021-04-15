@@ -14,10 +14,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-lib": "vue-cli-service build --target lib --inline-vue --name v-admin src/admin.js",
+    "build-lib": "vue-cli-service build --target lib --name v-admin src/admin.js",
     "lint": "vue-cli-service lint",
     "test": "npm run lint",
     "release": "npm run test && npm run build-lib && standard-version && git push --follow-tags && npm publish"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "dependencies": {
     "@vuelidate/core": "^2.0.0-alpha.15",
