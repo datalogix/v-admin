@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/datalogix/v-admin/compare/v0.0.11...v0.0.12) (2021-04-15)
+
+
+### Features
+
+* add clickHandler ([869be60](https://github.com/datalogix/v-admin/commit/869be6048c3a11d3fcc5313ba3c30a848c8aaf7b))
+
 ### [0.0.11](https://github.com/datalogix/v-admin/compare/v0.0.10...v0.0.11) (2021-04-15)
 
 
