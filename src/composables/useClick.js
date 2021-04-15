@@ -12,6 +12,10 @@ export const useClick = (to, external = false) => {
       return admin.notify('Nenhuma ação definida')
     }
 
+    if (typeof admin.options.clickHandler === 'function') {
+      return admin.options.clickHandler(to, external)
+    }
+
     if (typeof to === 'string' && to.startsWith('http')) {
       if (external) {
         return window.open(to, '_blank')
