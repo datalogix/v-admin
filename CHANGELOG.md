@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/datalogix/v-admin/compare/v0.0.12...v0.0.13) (2021-04-15)
+
+
+### Features
+
+* create visit method ([ba3a336](https://github.com/datalogix/v-admin/commit/ba3a33689eacf43933e1bd45b96e84c19b6b159a))
+
+
+### Bug Fixes
+
+* use AdminLink in logo ([db77d80](https://github.com/datalogix/v-admin/commit/db77d804ec8793a9a021f582d19387a709849b18))
+
 ### [0.0.12](https://github.com/datalogix/v-admin/compare/v0.0.11...v0.0.12) (2021-04-15)
 
 
