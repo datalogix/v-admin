@@ -3,7 +3,7 @@ import AppLayout from '@/layouts/App'
 import App from '@/views/App'
 
 export const DEFAULTS = {
-  app: createApp(App),
+  app: () => createApp(App),
   router: 'router-view',
   layout: AppLayout,
   el: '#app',
