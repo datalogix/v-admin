@@ -3,7 +3,8 @@
     <template v-slot:default="{ on }">
       <Button class="p-button-secondary p-button-text" v-on="on">
         <Avatar
-          class="bg-indigo-500 text-white mr-2"
+          class="mr-2"
+          style="background-color: #6366f1; color: #fff"
           shape="circle"
           :icon="user.avatar ? null : 'pi pi-user'"
           :image="user.avatar"
