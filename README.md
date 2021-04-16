@@ -1,52 +1,52 @@
-# Vue Admin
+# @datalogix/v-admin
 
-## Roadmap v1
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
+[![Codecov][codecov-src]][codecov-href]
+[![License][license-src]][license-href]
 
-- auth
-- translations
+> Administration panel with Vue 3
 
-- Resources (Index, Create, View, Edit, Update, Delete)
-- Dashboards
+[📖 **Release Notes**](./CHANGELOG.md)
 
-- Auth (Login, Logout, Forgot Password, Reset Password)
-- Refactor module Auth (useAuth)
+## Setup
+
+1. Add `@datalogix/v-admin` dependency to your project
+
+```bash
+yarn add @datalogix/v-admin # or npm install --save @datalogix/v-admin
+```
+
+## Roadmap
+
+- Translations
 - Handle erros
 
-## Next Features
+## Development
 
-- Tools
-- Resource Administrators with permissions
-- Resources (tabs) eg: filter status (Pending, Approved, Reproved)
-- Multiple dashboards
-- Translations (EN, PT, ES)
-- Allow user select language
+1. Clone this repository
+2. Install dependencies using `yarn install` or `npm install`
+3. Start development server using `yarn serve` or `npm run serve`
 
-## V2
+## License
 
-- Notify Admin updates
-- Auth (Login with phone, Forgot Passowrd with phone - send sms with code)
-- Error Reporting (Ex: problems sending e-mail, website down)
-- Notifications (Things that happen in the project, ex: new contact sending)
-- Allow user to install tools when allowed
-- Allow user to create resource when allowed
-- Think about a future integration with our CRM (APOLO) to open calls, requests, among others.
+[MIT License](./LICENSE)
 
-## Project setup
-```
-yarn install
-```
+Copyright (c) Datalogix
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+<!-- Badges -->
+[npm-version-src]: https://img.shields.io/npm/v/@datalogix/v-admin/latest.svg
+[npm-version-href]: https://npmjs.com/package/@datalogix/v-admin
 
-### Compiles and minifies for production
-```
-yarn build
-```
+[npm-downloads-src]: https://img.shields.io/npm/dt/@datalogix/v-admin.svg
+[npm-downloads-href]: https://npmjs.com/package/@datalogix/v-admin
 
-### Lints and fixes files
-```
-yarn lint
-```
+[github-actions-ci-src]: https://github.com/datalogix/v-admin/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/datalogix/v-admin/actions?query=workflow%3Aci
+
+[codecov-src]: https://img.shields.io/codecov/c/github/datalogix/v-admin.svg
+[codecov-href]: https://codecov.io/gh/datalogix/v-admin
+
+[license-src]: https://img.shields.io/npm/l/@datalogix/v-admin.svg
+[license-href]: https://npmjs.com/package/@datalogix/v-admin
