@@ -9,7 +9,7 @@ export const applyState = (admin) => {
     globalSearch: admin.options.globalSearch
   })
 
-  admin.booting((admin, app) => {
+  admin.prepare((admin, app) => {
     admin.navigation = new ListHelper(app.$store, 'navigation')
     admin.createMenu = new ListHelper(app.$store, 'createMenu')
     admin.userMenu = new ListHelper(app.$store, 'userMenu')
