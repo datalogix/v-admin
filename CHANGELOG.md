@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/datalogix/v-admin/compare/v0.0.14...v0.0.15) (2021-04-16)
+
+
+### Features
+
+* add init function module ([672af57](https://github.com/datalogix/v-admin/commit/672af572f85c7288082cea73340e5b796549df04))
+
+
+### Bug Fixes
+
+* hooks ([ca66d46](https://github.com/datalogix/v-admin/commit/ca66d46ff82fa3f5b6d30a3e70f16ebbf5a8ffef))
+
 ### [0.0.14](https://github.com/datalogix/v-admin/compare/v0.0.13...v0.0.14) (2021-04-16)
 
 ### [0.0.13](https://github.com/datalogix/v-admin/compare/v0.0.12...v0.0.13) (2021-04-15)
