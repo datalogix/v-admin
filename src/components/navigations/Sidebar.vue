@@ -28,7 +28,7 @@ export default {
     let sidebarDesktop
 
     const isMobile = () => {
-      return window && window.innerWidth < 990
+      return window && window.innerWidth < 1024
     }
 
     const check = () => {
