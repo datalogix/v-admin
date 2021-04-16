@@ -18,7 +18,9 @@ export const applyState = (admin) => {
   })
 
   admin.booted((admin, app) => {
-    admin.loaded()
+    setTimeout(() => {
+      admin.loaded()
+    }, admin.options.loadingTimeout || 0)
   })
 
   admin.extend({
