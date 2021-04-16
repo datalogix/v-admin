@@ -13,9 +13,9 @@ export const applyPlugins = (admin) => {
     const store = createStore(admin)
 
     admin.inject('admin', admin)
-      .inject('api', api)
-      .inject('router', router)
-      .inject('store', store)
+    admin.inject('api', api)
+    admin.inject('router', router)
+    admin.inject('store', store)
 
     await admin.callHook('prepare', admin, app)
 
