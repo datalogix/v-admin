@@ -1,6 +1,6 @@
 {
   "name": "@datalogix/v-admin",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Administration panel with Vue 3",
   "repository": "datalogix/v-admin",
   "license": "MIT",
