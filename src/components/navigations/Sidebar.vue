@@ -28,7 +28,7 @@ export default {
     let sidebarDesktop
 
     const isMobile = () => {
-      return window && window.innerWidth < 1024
+      return window && window.innerWidth < 990
     }
 
     const check = () => {
@@ -48,6 +48,7 @@ export default {
     onMounted(() => {
       window.addEventListener('load', check)
       window.addEventListener('resize', check)
+      check()
     })
 
     onUnmounted(() => {
