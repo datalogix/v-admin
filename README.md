@@ -8,26 +8,65 @@
 
 > Administration panel with Vue 3
 
-[📖 **Release Notes**](./CHANGELOG.md)
+- [✨ &nbsp;Release Notes](./CHANGELOG.md)
 
 ## Setup
 
-1. Add `@datalogix/v-admin` dependency to your project
+- Add `@datalogix/v-admin` dependency using `yarn` or `npm` to your project
 
 ```bash
-yarn add @datalogix/v-admin # or npm install --save @datalogix/v-admin
+yarn add @datalogix/v-admin
 ```
 
-## Roadmap
+OR
 
-- Translations
-- Handle erros
+```bash
+npm install @datalogix/v-admin --save
+```
+
+## Usage
+
+```js
+import { createAdmin } from '@datalogix/v-admin'
+
+createAdmin(/* options */)
+```
+
+## Options
+
+### app
+### router
+### layout
+### el
+### name
+### locale
+### logo
+### base
+### apiBaseURL
+### loading
+### loadingTimeout
+### displayUserName
+### user
+### dashboard
+### dashboardOptions
+### globalSearch
+### globalSearchOptions
+### createMenu
+### userMenu
+### navigation
+### plugins
+### modules
 
 ## Development
 
 1. Clone this repository
 2. Install dependencies using `yarn install` or `npm install`
 3. Start development server using `yarn serve` or `npm run serve`
+
+## Roadmap
+
+- Translations
+- Handle erros
 
 ## License
 
