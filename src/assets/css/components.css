@@ -26,3 +26,8 @@
 .p-message-icon {
   @apply text-4xl mt-2 mr-4 !important;
 }
+
+/* Inputtext */
+.p-inputtext {
+  width: 100% !important;
+}
