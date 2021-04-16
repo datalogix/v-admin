@@ -6,8 +6,6 @@ import { applyState } from '@/core/state'
 import { applyModules } from '@/core/modules'
 import { applyPlugins } from '@/core/plugins'
 
-import '@/assets/css/tailwind.css'
-
 export * from '@/composables'
 
 export const ADMIN_KEY = Symbol('Admin')
@@ -97,6 +95,7 @@ export class Admin extends Hookable {
   /**
    * Visit
    */
+
   async visit (to, external = false) {
     if (typeof to === 'function') {
       to = await to()
