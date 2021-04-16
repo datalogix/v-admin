@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/datalogix/v-admin/compare/v0.0.16...v0.0.17) (2021-04-16)
+
+
+### Bug Fixes
+
+* sidebar ([4eb2c3a](https://github.com/datalogix/v-admin/commit/4eb2c3a818bbac0b3d1e5c0e9ea34d827f46bd80))
+* user meu ([b258052](https://github.com/datalogix/v-admin/commit/b258052ee7c0945aa2b77e490ff97743bf140dbb))
+
 ### [0.0.16](https://github.com/datalogix/v-admin/compare/v0.0.15...v0.0.16) (2021-04-16)
 
 
