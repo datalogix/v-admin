@@ -16,16 +16,22 @@ export const applyModules = (admin) => {
       for (const module of this.modules) {
         const $module = await module(this, this.app)
 
-        if (typeof $module.setup === 'function') {
-          this.setup((admin, app) => $module.setup(admin, app))
-        }
+        if ($module) {
+          if (typeof $module.setup === 'function') {
+            this.setup((admin, app) => $module.setup(admin, app))
+          }
 
-        if (typeof $module.booting === 'function') {
-          this.booting((admin, app) => $module.booting(admin, app))
-        }
+          if (typeof $module.booting === 'function') {
+            this.booting((admin, app) => $module.booting(admin, app))
+          }
 
-        if (typeof $module.booted === 'function') {
-          this.booted((admin, app) => $module.booted(admin, app))
+          if (typeof $module.booted === 'function') {
+            this.booted((admin, app) => $module.booted(admin, app))
+          }
+
+          if (typeof $module.init === 'function') {
+            await $module.init()
+          }
         }
       }
 
