@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/datalogix/v-admin/compare/v0.0.15...v0.0.16) (2021-04-16)
+
+
+### Features
+
+* add timeout hide loading ([0461d16](https://github.com/datalogix/v-admin/commit/0461d1626be23bd6f2f2a849c6fa24bac252c44e))
+
 ### [0.0.15](https://github.com/datalogix/v-admin/compare/v0.0.14...v0.0.15) (2021-04-16)
 
 
