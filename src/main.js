@@ -1,3 +1,3 @@
-import { createAdmin } from '@/admin'
+import { createAdmin } from '@/'
 
 createAdmin()
