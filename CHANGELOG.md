@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.21](https://github.com/datalogix/v-admin/compare/v0.0.20...v0.0.21) (2021-04-19)
+
+
+### Features
+
+* support notification options from api ([d6ceb90](https://github.com/datalogix/v-admin/commit/d6ceb90e0dcd699fb7603bc769abf135f55e9985))
+
+
+### Bug Fixes
+
+* build name ([2262836](https://github.com/datalogix/v-admin/commit/22628365ef1816f679d809fb861d1a199281eb38))
+
 ### [0.0.20](https://github.com/datalogix/v-admin/compare/v0.0.19...v0.0.20) (2021-04-16)
 
 ### [0.0.19](https://github.com/datalogix/v-admin/compare/v0.0.18...v0.0.19) (2021-04-16)
