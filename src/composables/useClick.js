@@ -1,4 +1,4 @@
-import { useAdmin } from '@/admin'
+import { useAdmin } from '@/'
 
 export const useClick = (to, external = false) => {
   const admin = useAdmin()

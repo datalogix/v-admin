@@ -1,3 +1,3 @@
-export * from './useApi'
-export * from './useClick'
-export * from './useToggle'
+export * from '@/composables/useApi'
+export * from '@/composables/useClick'
+export * from '@/composables/useToggle'

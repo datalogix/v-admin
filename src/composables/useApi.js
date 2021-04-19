@@ -1,5 +1,5 @@
 import { reactive, toRefs, watchEffect } from 'vue'
-import { useAdmin } from '@/admin'
+import { useAdmin } from '@/'
 
 export const useApi = (url, options = {}, autoExecute = true) => {
   const admin = useAdmin()

@@ -107,7 +107,7 @@
 <script>
 import { computed, reactive, toRefs, watch } from 'vue'
 import defu from 'defu'
-import { useAdmin, useApi, useToggle } from '@/admin'
+import { useAdmin, useApi, useToggle } from '@/'
 
 export default {
   setup () {

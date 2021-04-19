@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { useAdmin } from '@/admin'
+import { useAdmin } from '@/'
 
 export default {
   props: {

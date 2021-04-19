@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { useAdmin, useApi } from '@/admin'
+import { useAdmin, useApi } from '@/'
 
 export default {
   setup () {
