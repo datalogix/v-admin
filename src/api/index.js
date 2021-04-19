@@ -13,8 +13,11 @@ export const createApi = (admin, options = {}) => {
 }
 
 const onResponseSuccess = (admin) => (response) => {
-  if (response.data && response.data.message) {
-    admin.notify(response.data.message, { type: response.data.messageType || 'success' })
+  const data = response && response.data ? response.data : {}
+  const message = data.message
+
+  if (message) {
+    admin.notify(message, { type: 'success', ...(data.messageOptions || {}) })
   }
 
   return Promise.resolve(response)
@@ -22,13 +25,13 @@ const onResponseSuccess = (admin) => (response) => {
 
 const onResponseError = (admin) => (error) => {
   if (error) {
-    let message = error.message || error
+    const response = error.response
+    const data = response && response.data ? response.data : {}
+    const message = response && response.status !== 422 && data.message ? data.message : error.message || error
 
-    if (error.response && error.response.status !== 422 && error.response.data && error.response.data.message) {
-      message = error.response.data.message
+    if (message) {
+      admin.notify(message, { type: 'error', ...(data.messageOptions || {}) })
     }
-
-    admin.notify(message, { type: 'error' })
   }
 
   return Promise.reject(error)
