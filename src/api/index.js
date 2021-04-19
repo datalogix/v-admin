@@ -1,6 +1,6 @@
 import { create } from 'axios'
 import defu from 'defu'
-import { DEFAULTS } from './defaults'
+import { DEFAULTS } from '@/api/defaults'
 
 export const createApi = (admin, options = {}) => {
   const axios = create(defu(options, {
