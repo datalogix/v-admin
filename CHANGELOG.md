@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.22](https://github.com/datalogix/v-admin/compare/v0.0.21...v0.0.22) (2021-04-23)
+
+
+### Features
+
+* add scroll panel ([baec419](https://github.com/datalogix/v-admin/commit/baec419a12c10f42edfcf8e020a2ddae768ff4b0))
+
+
+### Bug Fixes
+
+* width ([566d4c1](https://github.com/datalogix/v-admin/commit/566d4c120dd02cdf479d48050af606e8119a6c93))
+
 ### [0.0.21](https://github.com/datalogix/v-admin/compare/v0.0.20...v0.0.21) (2021-04-19)
 
 
