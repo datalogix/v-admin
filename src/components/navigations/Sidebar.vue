@@ -14,15 +14,22 @@
     :class="opened ? 'translate-x-0 ease-out lg:translate-x-0 lg:static lg:inset-0' : '-translate-x-full ease-in'"
     class="fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-gray-900 overflow-y-auto"
   >
-    <slot />
+    <ScrollPanel class="h-full">
+      <slot />
+    </ScrollPanel>
   </div>
 </template>
 
 <script>
 import { onBeforeMount, onMounted, onUnmounted } from 'vue'
+import ScrollPanel from 'primevue/scrollpanel'
 import { useToggle } from '@/composables'
 
 export default {
+  components: {
+    ScrollPanel
+  },
+
   setup () {
     const { opened, open, close, toggle } = useToggle()
     let sidebarDesktop
