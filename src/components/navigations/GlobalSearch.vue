@@ -16,7 +16,7 @@
             v-model="search"
             type="text"
             placeholder="Search"
-            class="md:w-80 lg:w-96"
+            class="input-global-search"
           />
         </span>
       </form>
@@ -35,7 +35,7 @@
 
     <div
       v-show="opened"
-      class="absolute left-0 mt-2 bg-white rounded border shadow overflow-hidden z-50 overflow-y-auto max-h-80 w-72 divide-y"
+      class="absolute left-0 mt-2 bg-white rounded border shadow overflow-hidden z-50 overflow-y-auto max-h-80 md:w-80 lg:w-96 divide-y"
     >
       <div
         v-if="!validSearch"
@@ -173,3 +173,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.input-global-search {
+  @apply md:w-80 lg:w-96 !important;
+}
+</style>
