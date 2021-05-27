@@ -63,8 +63,9 @@ createAdmin(/* options */)
 2. Install dependencies using `yarn install` or `npm install`
 3. Start development server using `yarn serve` or `npm run serve`
 
-## Roadmap
+## Roadmap v1
 
+- Notifications
 - Translations
 - Handle erros
 
