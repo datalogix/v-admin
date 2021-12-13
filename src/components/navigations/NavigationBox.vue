@@ -20,7 +20,13 @@
 </template>
 
 <script>
+import AdminSubtitle from '@/components/contents/Subtitle'
+
 export default {
+  components: {
+    AdminSubtitle
+  },
+
   props: {
     items: {
       type: Array,

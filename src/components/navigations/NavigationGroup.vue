@@ -16,7 +16,13 @@
 </template>
 
 <script>
+import AdminNavigationItem from '@/components/navigations/NavigationItem'
+
 export default {
+  components: {
+    AdminNavigationItem
+  },
+
   emits: ['clicked'],
 
   props: {

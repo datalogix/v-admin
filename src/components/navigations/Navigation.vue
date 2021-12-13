@@ -19,7 +19,15 @@
 </template>
 
 <script>
+import AdminNavigationGroup from '@/components/navigations/NavigationGroup'
+import AdminNavigationItem from '@/components/navigations/NavigationItem'
+
 export default {
+  components: {
+    AdminNavigationGroup,
+    AdminNavigationItem
+  },
+
   emits: ['clicked'],
 
   props: {

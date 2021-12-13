@@ -107,9 +107,14 @@
 <script>
 import { computed, reactive, toRefs, watch } from 'vue'
 import defu from 'defu'
+import InputText from 'primevue/inputtext'
 import { useAdmin, useApi, useToggle } from '@/'
 
 export default {
+  components: {
+    InputText
+  },
+
   setup () {
     const admin = useAdmin()
     const { opened, closed, open, close } = useToggle()

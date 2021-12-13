@@ -2,7 +2,7 @@
   <div class="flex items-center" v-if="items.length">
     <div class="relative">
       <slot :on="{ click() { toggle() }}">
-        <Button
+        <AdminButton
           @click="toggle"
           class="p-button-rounded p-button-secondary"
           icon="pi pi-ellipsis-v"

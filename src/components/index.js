@@ -8,61 +8,36 @@ import ConfirmationService from 'primevue/confirmationservice'
 
 import { GlobalEvents } from 'vue-global-events'
 
-import Avatar from 'primevue/avatar'
-import Button from 'primevue/button'
-import InputText from 'primevue/inputtext'
-import Message from 'primevue/message'
-
-import AdminCharts from '@/components/charts/Charts'
-import AdminBox from '@/components/contents/Box'
+import AdminButton from 'primevue/button'
 import AdminField from '@/components/contents/Field'
-import AdminHeader from '@/components/contents/Header'
 import AdminIcon from '@/components/contents/Icon'
 import AdminLink from '@/components/contents/Link'
-import AdminLoading from '@/components/contents/Loading'
-import AdminSubtitle from '@/components/contents/Subtitle'
-import AdminTitle from '@/components/contents/Title'
 
-import AdminCreateMenu from '@/components/menus/CreateMenu'
-import AdminMenuDropdown from '@/components/menus/MenuDropdown'
-import AdminUserMenu from '@/components/menus/UserMenu'
+export * as AdminCharts from '@/components/charts/Charts'
+export * as AdminBox from '@/components/contents/Box'
+export * as AdminHeader from '@/components/contents/Header'
+export * as AdminLoading from '@/components/contents/Loading'
+export * as AdminSubtitle from '@/components/contents/Subtitle'
+export * as AdminTitle from '@/components/contents/Title'
 
-import AdminGlobalSearch from '@/components/navigations/GlobalSearch'
-import AdminNavigation from '@/components/navigations/Navigation'
-import AdminNavigationBox from '@/components/navigations/NavigationBox'
-import AdminNavigationGroup from '@/components/navigations/NavigationGroup'
-import AdminNavigationItem from '@/components/navigations/NavigationItem'
-import AdminSidebar from '@/components/navigations/Sidebar'
+export * as AdminCreateMenu from '@/components/menus/CreateMenu'
+export * as AdminMenuDropdown from '@/components/menus/MenuDropdown'
+export * as AdminUserMenu from '@/components/menus/UserMenu'
+
+export * as AdminGlobalSearch from '@/components/navigations/GlobalSearch'
+export * as AdminNavigation from '@/components/navigations/Navigation'
+export * as AdminNavigationBox from '@/components/navigations/NavigationBox'
+export * as AdminNavigationGroup from '@/components/navigations/NavigationGroup'
+export * as AdminNavigationItem from '@/components/navigations/NavigationItem'
+export * as AdminSidebar from '@/components/navigations/Sidebar'
 
 export const registerComponents = (admin) => (app) => {
   app.use(PrimeVue)
   app.use(ConfirmationService)
 
   app.component('GlobalEvents', GlobalEvents)
-
-  app.component('Avatar', Avatar)
-  app.component('Button', Button)
-  app.component('InputText', InputText)
-  app.component('Message', Message)
-
-  app.component('AdminCharts', AdminCharts)
-  app.component('AdminBox', AdminBox)
+  app.component('AdminButton', AdminButton)
   app.component('AdminField', AdminField)
-  app.component('AdminHeader', AdminHeader)
   app.component('AdminIcon', AdminIcon)
   app.component('AdminLink', AdminLink)
-  app.component('AdminLoading', AdminLoading)
-  app.component('AdminSubtitle', AdminSubtitle)
-  app.component('AdminTitle', AdminTitle)
-
-  app.component('AdminCreateMenu', AdminCreateMenu)
-  app.component('AdminMenuDropdown', AdminMenuDropdown)
-  app.component('AdminUserMenu', AdminUserMenu)
-
-  app.component('AdminGlobalSearch', AdminGlobalSearch)
-  app.component('AdminNavigation', AdminNavigation)
-  app.component('AdminNavigationBox', AdminNavigationBox)
-  app.component('AdminNavigationGroup', AdminNavigationGroup)
-  app.component('AdminNavigationItem', AdminNavigationItem)
-  app.component('AdminSidebar', AdminSidebar)
 }

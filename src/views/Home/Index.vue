@@ -16,8 +16,17 @@
 
 <script>
 import { useAdmin, useApi } from '@/'
+import AdminCharts from '@/components/charts/Charts'
+import AdminHeader from '@/components/contents/Header'
+import AdminNavigationBox from '@/components/navigations/NavigationBox'
 
 export default {
+  components: {
+    AdminCharts,
+    AdminHeader,
+    AdminNavigationBox
+  },
+
   setup () {
     const admin = useAdmin()
     const { response: data, loading } = useApi('/dashboard', admin.options.dashboardOptions, admin.hasDashboard())

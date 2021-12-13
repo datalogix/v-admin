@@ -15,3 +15,15 @@
     <p>Caso o problema persista, entre em contato com o desenvolvedor.</p>
   </Message>
 </template>
+
+<script>
+import Message from 'primevue/message'
+import AdminSubtitle from '@/components/contents/Subtitle'
+
+export default {
+  components: {
+    Message,
+    AdminSubtitle
+  }
+}
+</script>
