@@ -1,4 +1,4 @@
-import Hookable from 'hookable'
+import { Hookable } from 'hookable'
 import { inject } from 'vue'
 import { mergeConfig } from '@/config'
 import { applyHelpers } from '@/core/helpers'
