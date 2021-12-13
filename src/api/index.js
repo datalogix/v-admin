@@ -4,7 +4,7 @@ import { DEFAULTS } from '@/api/defaults'
 
 export const createApi = (admin, options = {}) => {
   const axios = create(defu(options, {
-    baseURL: admin.options.apiBaseURL || `/${admin.options.base.trim('/')}/api`
+    baseURL: admin.options.apiBaseURL || `${admin.options.base.charAt(0) === '/' ? admin.options.base.substring(1) : admin.options.base}/api`
   }, DEFAULTS))
 
   axios.interceptors.response.use(onResponseSuccess(admin), onResponseError(admin))
