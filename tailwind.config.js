@@ -1,8 +1,6 @@
 module.exports = {
   purge: false,
 
-  darkMode: false,
-
   theme: {
     extend: {
       fontFamily: {
