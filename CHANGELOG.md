@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.26](https://github.com/datalogix/v-admin/compare/v0.0.25...v0.0.26) (2021-12-13)
+
+
+### Bug Fixes
+
+* api baseURL ([4881e24](https://github.com/datalogix/v-admin/commit/4881e2456ad19f1f34c00b53c421344a92cbb20f))
+* hookable ([56531b4](https://github.com/datalogix/v-admin/commit/56531b467e90277191e58d4afc9c935d72166f1e))
+
 ### [0.0.25](https://github.com/datalogix/v-admin/compare/v0.0.24...v0.0.25) (2021-12-10)
 
 ### [0.0.24](https://github.com/datalogix/v-admin/compare/v0.0.23...v0.0.24) (2021-12-10)
