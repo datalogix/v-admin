@@ -34,40 +34,13 @@ createAdmin(/* options */)
 
 ## Options
 
-### app
-### router
-### layout
-### el
-### name
-### locale
-### logo
-### base
-### apiBaseURL
-### loading
-### loadingTimeout
-### displayUserName
-### user
-### dashboard
-### dashboardOptions
-### globalSearch
-### globalSearchOptions
-### createMenu
-### userMenu
-### navigation
-### plugins
-### modules
+...
 
 ## Development
 
 1. Clone this repository
 2. Install dependencies using `yarn install` or `npm install`
 3. Start development server using `yarn serve` or `npm run serve`
-
-## Roadmap v1
-
-- Notifications
-- Translations
-- Handle erros
 
 ## License
 
