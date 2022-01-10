@@ -1,14 +1,8 @@
 import { createStore as baseCreateStore } from 'vuex'
-import { createList, ListHelper } from '@/store/createList'
+import { ListHelper, createList } from './createList'
 
-export { ListHelper }
+export { ListHelper, createList }
 
-export const createStore = ({ options }) => baseCreateStore({
-  strict: process.env.NODE_ENV !== 'production',
-
-  modules: {
-    navigation: createList(options.navigation),
-    createMenu: createList(options.createMenu),
-    userMenu: createList(options.userMenu)
-  }
+export const createStore = (admin) => baseCreateStore({
+  strict: process.env.NODE_ENV !== 'production'
 })

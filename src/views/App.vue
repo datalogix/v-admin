@@ -10,13 +10,8 @@
 
 <script>
 import { useAdmin } from '@/'
-import AdminLoading from '@/components/contents/Loading'
 
 export default {
-  components: {
-    AdminLoading
-  },
-
   setup () {
     const admin = useAdmin()
 

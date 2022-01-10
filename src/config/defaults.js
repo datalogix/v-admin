@@ -1,31 +1,43 @@
-import { createApp } from 'vue'
-import AppLayout from '@/layouts/App'
-import App from '@/views/App'
+import App from '@/views/App.vue'
+import AppLayout from '@/layouts/App.vue'
 
 export const DEFAULTS = {
-  app: () => createApp(App),
-  router: 'router-view',
+  app: App,
   layout: AppLayout,
   el: '#app',
+
   name: 'Datalogix',
-  locale: 'pt-BR',
   logo: null,
-  base: process.env.ADMIN_BASE || '/admin',
-  apiBaseURL: process.env.ADMIN_API_BASE_URL,
-  loading: 'loading',
-  loadingTimeout: 300,
   displayUserName: true,
+  locale: 'pt-BR',
+
+  loading: 'admin-loading',
+  loadingTimeout: 300,
+
+  base: import.meta.env.ADMIN_BASE || '/admin',
+  router: 'router-view',
+
+  axios: {
+    withCredentials: true
+  },
+
+  notification: {},
+
   user: null,
+
   dashboard: true,
   dashboardOptions: {},
+
   globalSearch: true,
   globalSearchOptions: {
     path: '/search',
     options: {}
   },
+
   createMenu: [],
   userMenu: [],
   navigation: [],
+
   plugins: [],
   modules: []
 }

@@ -23,7 +23,7 @@
     </AdminSidebar>
 
     <div class="flex-1 flex flex-col overflow-hidden">
-      <header class="flex items-center justify-between px-2 bg-white border-b-4 border-indigo-500 text-gray-500">
+      <header class="flex items-center justify-between p-2 bg-white border-b-4 border-indigo-500 text-gray-500">
         <div class="flex items-center">
           <AdminButton
             icon="pi pi-bars"
@@ -48,21 +48,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import AdminCreateMenu from '@/components/menus/CreateMenu'
-import AdminUserMenu from '@/components/menus/UserMenu'
-import AdminGlobalSearch from '@/components/navigations/GlobalSearch'
-import AdminNavigation from '@/components/navigations/Navigation'
-import AdminSidebar from '@/components/navigations/Sidebar'
-
-export default {
-  components: {
-    AdminCreateMenu,
-    AdminUserMenu,
-    AdminGlobalSearch,
-    AdminNavigation,
-    AdminSidebar
-  }
-}
-</script>

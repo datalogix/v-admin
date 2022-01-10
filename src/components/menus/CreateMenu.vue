@@ -11,13 +11,7 @@
 </template>
 
 <script>
-import AdminMenuDropdown from '@/components/menus/MenuDropdown'
-
 export default {
-  components: {
-    AdminMenuDropdown
-  },
-
   props: {
     items: {
       type: Array,

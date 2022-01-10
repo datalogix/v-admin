@@ -1,33 +1,37 @@
 <template>
-  <template
-    v-for="(item, key) in items"
-    :key="key"
-  >
-    <AdminNavigationGroup
-      v-if="item.items"
-      :title="item.title"
-      :items="item.items"
-      @clicked="$emit('clicked')"
-    />
+  <nav>
+    <ul class="divide-y divide-gray-700 mb-8">
+      <li
+        v-for="(item, key) in items"
+        :key="key"
+      >
+        <AdminNavigationGroup
+          v-if="item.title && item.items && item.items.length"
+          :title="item.title"
+          :items="item.items"
+          @clicked="$emit('clicked')"
+        />
 
-    <AdminNavigationItem
-      v-else
-      v-bind="item"
-      @clicked="$emit('clicked')"
-    />
-  </template>
+        <AdminNavigationItem
+          v-else-if="item.items"
+          v-for="(i, k) in item.items"
+          v-bind="i"
+          :key="k"
+          @clicked="$emit('clicked')"
+        />
+
+        <AdminNavigationItem
+          v-else
+          v-bind="item"
+          @clicked="$emit('clicked')"
+        />
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
-import AdminNavigationGroup from '@/components/navigations/NavigationGroup'
-import AdminNavigationItem from '@/components/navigations/NavigationItem'
-
 export default {
-  components: {
-    AdminNavigationGroup,
-    AdminNavigationItem
-  },
-
   emits: ['clicked'],
 
   props: {

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { useClick } from '@/composables'
+import { useClick } from '@/'
 
 export default {
   emits: ['clicked'],

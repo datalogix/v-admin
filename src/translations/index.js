@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
-import en from '@/translations/locales/en'
-import ptBR from '@/translations/locales/pt-BR'
+import en from './locales/en'
+import ptBR from './locales/pt-BR'
 
 export const createTranslations = (admin) => createI18n({
   legacy: false,

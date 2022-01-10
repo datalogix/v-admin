@@ -1,5 +1,5 @@
 import { reactive } from 'vue'
-import { ListHelper } from '@/store'
+import { ListHelper, createList } from '@/store'
 
 export const applyState = (admin) => {
   const $state = admin.$state = reactive({
@@ -10,6 +10,10 @@ export const applyState = (admin) => {
   })
 
   admin.prepare((admin, app) => {
+    app.$store.registerModule('navigation', createList(admin.options.navigation))
+    app.$store.registerModule('createMenu', createList(admin.options.createMenu))
+    app.$store.registerModule('userMenu', createList(admin.options.userMenu))
+
     admin.navigation = new ListHelper(app.$store, 'navigation')
     admin.createMenu = new ListHelper(app.$store, 'createMenu')
     admin.userMenu = new ListHelper(app.$store, 'userMenu')
@@ -75,9 +79,9 @@ export const applyState = (admin) => {
         this.disableGlobalSearch()
       }
 
+      this.navigation && this.navigation.update((user || {}).navigation || this.options.navigation)
       this.createMenu && this.createMenu.update((user || {}).createMenu || this.options.createMenu)
       this.userMenu && this.userMenu.update((user || {}).userMenu || this.options.userMenu)
-      this.navigation && this.navigation.update((user || {}).navigation || this.options.navigation)
 
       await this.callHook('user:update', this, user)
     }

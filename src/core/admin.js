@@ -1,12 +1,10 @@
 import { Hookable } from 'hookable'
-import { inject } from 'vue'
+import { inject, createApp } from 'vue'
 import { mergeConfig } from '@/config'
-import { applyHelpers } from '@/core/helpers'
-import { applyState } from '@/core/state'
-import { applyModules } from '@/core/modules'
-import { applyPlugins } from '@/core/plugins'
-
-export * from '@/composables'
+import { applyHelpers } from './helpers'
+import { applyState } from './state'
+import { applyModules } from './modules'
+import { applyPlugins } from './plugins'
 
 export const ADMIN_KEY = Symbol('Admin')
 
@@ -44,10 +42,10 @@ export class Admin extends Hookable {
 
   async createAdminApp () {
     if (typeof this.options.app === 'function') {
-      return this.options.app(this)
+      return await this.options.app(this)
     }
 
-    return this.options.app
+    return createApp(this.options.app)
   }
 
   async init () {
@@ -101,7 +99,7 @@ export class Admin extends Hookable {
       to = await to()
     }
 
-    if (!to) {
+    if (!to && this.notify) {
       return this.notify('Nenhuma ação definida')
     }
 

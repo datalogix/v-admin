@@ -23,7 +23,7 @@
 <script>
 import { onBeforeMount, onMounted, onUnmounted } from 'vue'
 import ScrollPanel from 'primevue/scrollpanel'
-import { useToggle } from '@/composables'
+import { useToggle } from '@/'
 
 export default {
   components: {
@@ -76,3 +76,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.p-scrollpanel-content {
+  @apply p-0 !important;
+}
+</style>

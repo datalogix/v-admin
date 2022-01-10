@@ -2,7 +2,7 @@
   <AdminMenuDropdown :items="items">
     <template v-slot:default="{ on }">
       <AdminButton class="p-button-secondary p-button-text" v-on="on">
-        <Avatar
+        <AdminAvatar
           class="mr-2"
           style="background-color: #6366f1; color: #fff"
           shape="circle"
@@ -20,15 +20,8 @@
 
 <script>
 import { useAdmin } from '@/'
-import Avatar from 'primevue/avatar'
-import AdminMenuDropdown from '@/components/menus/MenuDropdown'
 
 export default {
-  components: {
-    AdminMenuDropdown,
-    Avatar
-  },
-
   props: {
     items: {
       type: Array,

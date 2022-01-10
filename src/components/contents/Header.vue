@@ -11,13 +11,7 @@
 </template>
 
 <script>
-import AdminTitle from '@/components/contents/Title'
-
 export default {
-  components: {
-    AdminTitle
-  },
-
   props: {
     title: {
       type: String

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mx-2 py-4">
+  <div class="relative mx-2">
     <div
       class="relative"
       :class="{ 'z-50' : opened }"

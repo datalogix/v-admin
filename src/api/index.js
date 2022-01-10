@@ -1,11 +1,10 @@
 import { create } from 'axios'
 import defu from 'defu'
-import { DEFAULTS } from '@/api/defaults'
 
 export const createApi = (admin, options = {}) => {
   const axios = create(defu(options, {
     baseURL: admin.options.apiBaseURL || `${admin.options.base.trim('/')}/api`
-  }, DEFAULTS))
+  }))
 
   axios.interceptors.response.use(onResponseSuccess(admin), onResponseError(admin))
 
@@ -16,11 +15,11 @@ const onResponseSuccess = (admin) => (response) => {
   const data = response && response.data ? response.data : {}
   const message = data.message
 
-  if (message) {
+  if (message && admin.notify) {
     admin.notify(message, { type: 'success', ...(data.messageOptions || {}) })
   }
 
-  return Promise.resolve(response)
+  return Promise.resolve(data || response)
 }
 
 const onResponseError = (admin) => (error) => {
@@ -29,7 +28,7 @@ const onResponseError = (admin) => (error) => {
     const data = response && response.data ? response.data : {}
     const message = response && response.status !== 422 && data.message ? data.message : error.message || error
 
-    if (message) {
+    if (message && admin.notify) {
       admin.notify(message, { type: 'error', ...(data.messageOptions || {}) })
     }
   }

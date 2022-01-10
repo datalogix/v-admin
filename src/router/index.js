@@ -1,5 +1,5 @@
 import { createRouter as baseCreateRouter, createWebHistory } from 'vue-router'
-import { routes } from '@/router/routes'
+import { routes } from './routes'
 
 export const createRouter = (admin) => {
   const router = baseCreateRouter({
@@ -9,7 +9,9 @@ export const createRouter = (admin) => {
 
   admin.extend({
     addRoute (route) {
-      this.$router.addRoute(route)
+      (Array.isArray(route) ? route : [route]).forEach(route => {
+        this.$router.addRoute(route)
+      })
     },
 
     middleware (middleware) {

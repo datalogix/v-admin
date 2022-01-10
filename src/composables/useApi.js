@@ -3,6 +3,11 @@ import { useAdmin } from '@/'
 
 export const useApi = (url, options = {}, autoExecute = true) => {
   const admin = useAdmin()
+
+  if (!admin.api) {
+    throw new Error('No api provided.')
+  }
+
   const state = reactive({
     response: null,
     loading: null,
@@ -15,8 +20,7 @@ export const useApi = (url, options = {}, autoExecute = true) => {
     state.error = null
 
     try {
-      const response = await admin.api(url, options)
-      state.response = response.data
+      state.response = await admin.api(url, options)
     } catch (error) {
       state.error = error
     } finally {

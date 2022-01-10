@@ -3,7 +3,11 @@ export const applyHelpers = (admin) => {
   admin.extend('inject', function (name, obj = {}) {
     const key = `$${name}`
 
-    this[name] = this[key] = this.app[key] = this.app.config.globalProperties[key] = obj
+    this[key] = this.app[key] = this.app.config.globalProperties[key] = obj
+
+    if (name !== 'app') {
+      this[name] = this[key]
+    }
   })
 
   // hooks
