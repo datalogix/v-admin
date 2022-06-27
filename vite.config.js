@@ -1,4 +1,5 @@
 import path from 'path'
+import { fileURLToPath, URL } from 'url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
@@ -14,7 +15,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
   build: {
@@ -24,7 +25,12 @@ export default defineConfig({
       fileName: (format) => `v-admin.${format}.js`
     },
     rollupOptions: {
-      external: ['chart.js/auto']
+      external: ['vue', 'chart.js/auto'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
     }
   }
 })
