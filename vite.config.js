@@ -24,14 +24,7 @@ export default defineConfig({
       fileName: (format) => `v-admin.${format}.js`
     },
     rollupOptions: {
-      external: ['chart.js/auto'],
-      output: {
-        assetFileNames: (assetInfo) => {
-          return assetInfo.name === 'style.css'
-            ? 'v-admin.css'
-            : assetInfo.name
-        }
-      }
+      external: ['chart.js/auto']
     }
   }
 })

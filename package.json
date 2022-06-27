@@ -4,7 +4,6 @@
   "description": "Administration panel with Vue 3",
   "repository": "datalogix/v-admin",
   "license": "MIT",
-  "author": "Ricardo Gobbo de Souza <ricardogobbosouza@yahoo.com.br>",
   "files": [
     "dist"
   ],
@@ -14,6 +13,10 @@
     ".": {
       "import": "./dist/v-admin.es.js",
       "require": "./dist/v-admin.umd.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
   "scripts": {
@@ -21,40 +24,40 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,jsx,ts,tsx,vue --ignore-path .gitignore .",
-    "test": "npm run lint",
-    "release": "npm run test && npm run build && standard-version && git push --follow-tags && npm publish"
+    "test": "pnpm run lint",
+    "release": "pnpm run test && pnpm run build && standard-version && git push --follow-tags && pnpm publish"
   },
   "dependencies": {
-    "axios": "^0.24",
-    "chart.js": "^3.7",
-    "defu": "^5.0",
+    "axios": "^0.27",
+    "chart.js": "^3.8",
+    "defu": "^6.0",
     "hookable": "^5.1",
     "primeicons": "^5.0",
-    "primevue": "^3.10",
+    "primevue": "^3.15",
     "quill": "^1.3",
     "vue": "^3.2",
     "vue-global-events": "^2.1",
-    "vue-i18n": "^9.2.0-beta.26",
+    "vue-i18n": "^9.2.0-beta.36",
     "vue-router": "^4.0",
     "vue-toastification": "^2.0.0-rc.5",
     "vuex": "^4.0"
   },
   "devDependencies": {
-    "@intlify/vite-plugin-vue-i18n": "^3.2.1",
-    "@vitejs/plugin-vue": "^2.0.0",
+    "@intlify/vite-plugin-vue-i18n": "^3.4",
+    "@vitejs/plugin-vue": "^2.3",
     "autoprefixer": "^10.4",
-    "eslint": "^8.4",
+    "eslint": "^8.18",
     "eslint-config-airbnb": "^19.0",
-    "eslint-config-standard": "^16.0",
-    "eslint-plugin-import": "^2.25",
-    "eslint-plugin-node": "^11.1",
-    "eslint-plugin-promise": "^5.2",
-    "eslint-plugin-vue": "^8.2",
+    "eslint-config-standard": "^17.0",
+    "eslint-plugin-import": "^2.26",
+    "eslint-plugin-n": "^15.2",
+    "eslint-plugin-promise": "^6.0",
+    "eslint-plugin-vue": "^9.1",
     "postcss": "^8.4",
-    "standard-version": "^9.3",
-    "tailwindcss": "^3.0",
-    "vite": "^2.7.2",
-    "vite-plugin-eslint": "^1.3.0"
+    "standard-version": "^9.5",
+    "tailwindcss": "^3.1",
+    "vite": "^2.9",
+    "vite-plugin-eslint": "^1.6"
   },
   "publishConfig": {
     "access": "public"

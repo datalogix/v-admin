@@ -12,16 +12,14 @@
 
 ## Setup
 
-- Add `@datalogix/v-admin` dependency using `yarn` or `npm` to your project
-
-```bash
-yarn add @datalogix/v-admin
-```
-
-OR
+- Add `@datalogix/v-admin` dependency using `npm`, `yarn` or `pnpm` to your project
 
 ```bash
 npm install @datalogix/v-admin --save
+# or
+yarn add @datalogix/v-admin
+# or
+pnpm install @datalogix/v-admin --save
 ```
 
 ## Usage
@@ -39,8 +37,8 @@ createAdmin(/* options */)
 ## Development
 
 1. Clone this repository
-2. Install dependencies using `yarn install` or `npm install`
-3. Start development server using `yarn serve` or `npm run serve`
+2. Install dependencies using `pnpm install`
+3. Start development server using `pnpm serve`
 
 ## License
 
